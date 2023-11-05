@@ -9,6 +9,9 @@ public class Player_Controller : MonoBehaviour
     public Rigidbody2D player_rigid;
     public Sprite bullet_sprite;
     private float speed = 10.0f;
+    public int score = 0;
+    public int laser_killed = 0;
+    public int bomb_killed = 0;
 
     void Start()
     {
