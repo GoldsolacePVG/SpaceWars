@@ -22,6 +22,20 @@ public class Player_Controller : MonoBehaviour
         Sprite sp = Instantiate<Sprite>(bullet_sprite, this.transform.position, Quaternion.identity);
     }
 
+    public void AddScore(string enemy) {
+        switch (enemy) {
+            case "Laser":
+                score += 10;
+                laser_killed += 1;
+            break;
+            case "Bomb":
+                score += 20;
+                bomb_killed += 1;
+            break;
+        }
+        Debug.Log("Player Score: " + score);
+    }
+
     void Update()
     {
         // PLAYER INPUTS
