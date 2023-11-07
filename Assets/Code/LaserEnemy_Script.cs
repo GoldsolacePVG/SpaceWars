@@ -6,6 +6,7 @@ public class LaserEnemy_Script : MonoBehaviour
 {
     private float speed = 5.0f;
     private int direction = 0;
+    private int hits = 0;
     void Start() {
         
     }
@@ -35,8 +36,11 @@ public class LaserEnemy_Script : MonoBehaviour
             }
         }
         if(other.collider.CompareTag("Bullet")) {
-            pc.AddScore("Laser");
-            Destroy(gameObject);
+            hits += 1;
+            if(hits >= 2) {
+                pc.AddScore("Laser");
+                Destroy(gameObject);
+            }
         }
     }
 }
