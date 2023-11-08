@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Bullet_Script : MonoBehaviour
 {
-    public Rigidbody2D bullet_rb;
     private float speed = 10.0f;
-    void Start() {
-        bullet_rb = GetComponent<Rigidbody2D>();
-    }
+    void Start() {}
 
     void MoveForward() {
         this.transform.position += Vector3.up * speed * Time.deltaTime;
@@ -16,12 +13,16 @@ public class Bullet_Script : MonoBehaviour
 
     void Update() {
         MoveForward();
+
+        if(this.transform.position.y >= 20.0f) {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.collider.CompareTag("LaserEnemy") || other.collider.CompareTag("BombEnemy") ||
-           other.collider.CompareTag("KamikazeEnemy") || other.collider.CompareTag("CannonEnemy") ||
-           other.collider.CompareTag("Boss")) {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
+           other.CompareTag("KamikazeEnemy") || other.CompareTag("CannonEnemy") ||
+           other.CompareTag("Boss")) {
             Destroy(gameObject);
         }
     }

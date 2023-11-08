@@ -80,14 +80,14 @@ public class BombEnemy_Script : MonoBehaviour
         FollowPath();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         Player_Controller pc = FindObjectOfType<Player_Controller>();
-        if(other.collider.CompareTag("Player")) {
+        if(other.CompareTag("Player")) {
             if(pc != null) {
                 Destroy(gameObject);
             }
         }
-        if (other.collider.CompareTag("Bullet")) {
+        if (other.CompareTag("Bullet")) {
             hits += 1;
             if(hits >= 3) {
                 pc.AddScore("Bomb");

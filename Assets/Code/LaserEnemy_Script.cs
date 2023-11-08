@@ -23,19 +23,19 @@ public class LaserEnemy_Script : MonoBehaviour
     }
 
     void Update() {
-        if(this.transform.position.x < -6.16) {direction = 1;}
-        if(this.transform.position.x >= 6.16) {direction = 0;}
+        if(this.transform.position.x < -6.16f) {direction = 1;}
+        if(this.transform.position.x >= 6.16f) {direction = 0;}
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         Player_Controller pc = FindObjectOfType<Player_Controller>();
-        if(other.collider.CompareTag("Player")) {
+        if(other.CompareTag("Player")) {
             if(pc != null) {
                 Destroy(gameObject);
             }
         }
-        if(other.collider.CompareTag("Bullet")) {
+        if(other.CompareTag("Bullet")) {
             hits += 1;
             if(hits >= 2) {
                 pc.AddScore("Laser");
