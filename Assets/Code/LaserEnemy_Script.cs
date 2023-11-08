@@ -37,7 +37,7 @@ public class LaserEnemy_Script : MonoBehaviour
         }
         if(other.CompareTag("Bullet")) {
             hits += 1;
-            if(hits >= 2) {
+            if(hits >= 5) {
                 pc.AddScore("Laser");
                 Destroy(gameObject);
             }

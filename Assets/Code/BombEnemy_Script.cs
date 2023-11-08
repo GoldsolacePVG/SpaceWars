@@ -89,7 +89,7 @@ public class BombEnemy_Script : MonoBehaviour
         }
         if (other.CompareTag("Bullet")) {
             hits += 1;
-            if(hits >= 3) {
+            if(hits >= 7) {
                 pc.AddScore("Bomb");
                 Destroy(gameObject);
             }
