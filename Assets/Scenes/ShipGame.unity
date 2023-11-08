@@ -483,6 +483,9 @@ MonoBehaviour:
   bomb_enemy1: {fileID: 679032800}
   bomb_enemy2: {fileID: 1001829991}
   bomb_enemy3: {fileID: 1473301197}
+  laser_spawn1: {fileID: 86745403}
+  laser_spawn2: {fileID: 793169182}
+  pc: {fileID: 1297252674}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class Player_Controller : MonoBehaviour
     public int score = 0;
     public int laser_killed = 0;
     public int bomb_killed = 0;
-    public int lives = 3;
+    public int lives = 5;
     private int shoot_count = 0;
     private bool can_shoot = true;
 
@@ -45,13 +45,7 @@ public class Player_Controller : MonoBehaviour
             can_shoot = false;
         }
 
-        /*if(!can_shoot) {
-            shoot_count++;
-            if(shoot_count >= 25) {
-                can_shoot = true;
-                shoot_count = 0;
-            }
-        }*/
+        /*if(!can_shoot) {shoot_count++;if(shoot_count >= 25) {can_shoot = true;shoot_count = 0;}}*/
     }
 
     private void FixedUpdate() 
