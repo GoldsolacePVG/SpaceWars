@@ -47,7 +47,7 @@ public class Player_Controller : MonoBehaviour
 
         if(!can_shoot) {
             shoot_count++;
-            if(shoot_count >= 20) {
+            if(shoot_count >= 25) {
                 can_shoot = true;
                 shoot_count = 0;
             }
