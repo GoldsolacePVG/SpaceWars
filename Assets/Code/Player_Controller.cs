@@ -45,9 +45,21 @@ public class Player_Controller : MonoBehaviour
             can_shoot = false;
         }
 
-        if(!can_shoot) {
+        /*if(!can_shoot) {
             shoot_count++;
             if(shoot_count >= 25) {
+                can_shoot = true;
+                shoot_count = 0;
+            }
+        }*/
+    }
+
+    private void FixedUpdate() 
+    {
+        if(!can_shoot) {
+            shoot_count++;
+            //Old Value 25
+            if(shoot_count >= 10) {
                 can_shoot = true;
                 shoot_count = 0;
             }
@@ -56,7 +68,7 @@ public class Player_Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy")) {
+        if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || other.CompareTag("LaserBullet")) {
             lives--;
         }
     }

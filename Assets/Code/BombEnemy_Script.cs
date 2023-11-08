@@ -8,7 +8,6 @@ public class BombEnemy_Script : MonoBehaviour
                      fourth_stage, fifth_stage;
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
     private float speed = 5.0f;
-
     void Start() {}
 
     void MoveForward() {

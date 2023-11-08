@@ -22,7 +22,7 @@ public class Bullet_Script : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
            other.CompareTag("KamikazeEnemy") || other.CompareTag("CannonEnemy") ||
-           other.CompareTag("Boss")) {
+           other.CompareTag("Boss") || other.CompareTag("LaserBullet")) {
             Destroy(gameObject);
         }
     }

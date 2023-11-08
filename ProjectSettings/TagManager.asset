@@ -10,6 +10,7 @@ TagManager:
   - KamikazeEnemy
   - CannonEnemy
   - Boss
+  - LaserBullet
   layers:
   - Default
   - TransparentFX

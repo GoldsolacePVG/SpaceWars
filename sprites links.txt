@@ -5,3 +5,9 @@ Shoot: https://opengameart.org/content/assets-free-laser-bullets-pack-2020
 Font used for title: https://www.dafont.com/es/alien-mushrooms.font
 
 Star: https://www.pngitem.com/middle/hTTJiRT_pixel-gun-wiki-blue-chaos-emerald-sprite-hd/
+
+Kamikaze Enemy: https://ar.pinterest.com/pin/849702654678932955/
+
+Laser Enemy: https://www.freepng.es/png-eeq4yz/
+
+Bomb Enemy: https://www.freepng.es/png-btbfwk

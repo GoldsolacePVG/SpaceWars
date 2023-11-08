@@ -13,7 +13,7 @@ public class Laser_Script : MonoBehaviour
 
     void Update() {
         MoveForward();
-        if (this.transform.position.y >= -20.0f) {
+        if (this.transform.position.y <= -20.0f) {
             Destroy(gameObject);
         }
     }
