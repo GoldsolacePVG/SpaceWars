@@ -6,9 +6,17 @@ public class BombEnemy_Script : MonoBehaviour
 {
     public Transform first_stage, second_stage, third_stage,
                      fourth_stage, fifth_stage;
+    public GameObject bomb_prefab;
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
+    private int shoot_count = 0;
     private float speed = 5.0f;
+    private bool can_shoot = false;
+    private bool first_time_shooting = false;
     void Start() {}
+
+    void FireBomb() {
+        GameObject sp = Instantiate<GameObject>(bomb_prefab, this.transform.position, Quaternion.identity);
+    }
 
     void MoveForward() {
         Transform orientation = second_stage;
@@ -76,7 +84,30 @@ public class BombEnemy_Script : MonoBehaviour
     }
 
     void Update() {
+        if(!first_time_shooting) {
+            int start_value = Random.Range(0, 50);
+            if(start_value == 1) {
+                first_time_shooting = true;
+            }
+        }
         FollowPath();
+        if(can_shoot) {
+            FireBomb();
+            can_shoot = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(first_time_shooting) {
+            if(!can_shoot) {
+                shoot_count++;
+                if(shoot_count >= 30) {
+                    can_shoot = true;
+                    shoot_count = 0;
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

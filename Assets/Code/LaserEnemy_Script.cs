@@ -5,7 +5,6 @@ using UnityEngine;
 public class LaserEnemy_Script : MonoBehaviour
 {
     public GameObject bullet_prefab;
-    //private Vector3 spawn = new Vector3();
     private float speed = 5.0f;
     private int direction = 0;
     private int hits = 0;
