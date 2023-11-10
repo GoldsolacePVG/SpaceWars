@@ -10,7 +10,7 @@ public class BombEnemy_Script : MonoBehaviour
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
     private int shoot_count = 0;
     private float speed = 5.0f;
-    private bool can_shoot = false;
+    public bool can_shoot = false;
     private bool first_time_shooting = false;
     void Start() {}
 

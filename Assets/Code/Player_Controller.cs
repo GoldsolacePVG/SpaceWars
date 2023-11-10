@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player_Controller : MonoBehaviour
 {
-    public GameObject bullet_prefab;
+    public GameObject bullet_prefab, destructionVFX;
+    public ParticleSystem centralVFX;
+    private Vector3 spawn;
     private float speed = 10.0f;
     public int score = 0;
     public int laser_killed = 0;
@@ -12,10 +14,18 @@ public class Player_Controller : MonoBehaviour
     public int lives = 5;
     private int shoot_count = 0;
     private bool can_shoot = true;
+    public bool dead = false;
 
-    void Start() {}
+    void Start() {
+        spawn = transform.position;
+    }
+
+    public void SpawnPlayer() {
+        this.transform.position = spawn;
+    }
 
     void Fire() {
+        centralVFX.Play();
         GameObject sp = Instantiate<GameObject>(bullet_prefab, this.transform.position, Quaternion.identity);
     }
 
@@ -33,6 +43,13 @@ public class Player_Controller : MonoBehaviour
         Debug.Log("Player Score: " + score);
     }
 
+    public void Destruction() {
+        Instantiate(destructionVFX, transform.position, Quaternion.identity);
+        lives--;
+        dead = true;
+        
+    }
+
     void Update()
     {
         // PLAYER INPUTS
@@ -44,8 +61,6 @@ public class Player_Controller : MonoBehaviour
             Fire();
             can_shoot = false;
         }
-
-        /*if(!can_shoot) {shoot_count++;if(shoot_count >= 25) {can_shoot = true;shoot_count = 0;}}*/
     }
 
     private void FixedUpdate() 
@@ -62,8 +77,9 @@ public class Player_Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || other.CompareTag("LaserBullet")) {
-            lives--;
+        if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
+            other.CompareTag("LaserBullet") || other.CompareTag("BombBullet")) {
+            Destruction();
         }
     }
 }

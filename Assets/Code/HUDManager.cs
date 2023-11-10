@@ -24,6 +24,5 @@ public class HUDManager : MonoBehaviour
         // Score
         score_shown = pc.score;
         score_text.text = string.Format("{0:0000}", score_shown);
-        //score_text = score_string.ToString();
     }
 }

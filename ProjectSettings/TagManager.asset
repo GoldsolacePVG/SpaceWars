@@ -21,6 +21,7 @@ TagManager:
   - Boss
   - KamikazeEnemy
   - CannonEnemy
+  - BombBullet
   layers:
   - Default
   - TransparentFX
