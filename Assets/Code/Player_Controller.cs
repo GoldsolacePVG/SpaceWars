@@ -6,6 +6,7 @@ public class Player_Controller : MonoBehaviour
 {
     public GameObject bullet_prefab, destructionVFX;
     public ParticleSystem centralVFX;
+    public AudioSource fire_audio;
     private Vector3 spawn;
     private float speed = 10.0f;
     public int score = 0;
@@ -27,6 +28,7 @@ public class Player_Controller : MonoBehaviour
     void Fire() {
         centralVFX.Play();
         GameObject sp = Instantiate<GameObject>(bullet_prefab, this.transform.position, Quaternion.identity);
+        fire_audio.Play();
     }
 
     public void AddScore(string enemy) {
@@ -47,16 +49,15 @@ public class Player_Controller : MonoBehaviour
         Instantiate(destructionVFX, transform.position, Quaternion.identity);
         lives--;
         dead = true;
-        
     }
 
     void Update()
     {
         // PLAYER INPUTS
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && this.transform.position.x > -6.23f){this.transform.position += Vector3.left * speed * Time.deltaTime;}
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && this.transform.position.x < 6.24f){this.transform.position += Vector3.right * speed * Time.deltaTime;}
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && this.transform.position.y < 0.0f) {this.transform.position += Vector3.up * speed * Time.deltaTime;}
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && this.transform.position.y > -5.97f) {this.transform.position += Vector3.down * speed * Time.deltaTime;}
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && this.transform.position.x > -6.23f){this.transform.position += Vector3.left * speed * Time.deltaTime;}
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && this.transform.position.x < 6.24f){this.transform.position += Vector3.right * speed * Time.deltaTime;}
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && this.transform.position.y < 0.0f) {this.transform.position += Vector3.up * speed * Time.deltaTime;}
+        if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && this.transform.position.y > -5.97f) {this.transform.position += Vector3.down * speed * Time.deltaTime;}
         if (Input.GetKey(KeyCode.Space) && can_shoot) {
             Fire();
             can_shoot = false;
