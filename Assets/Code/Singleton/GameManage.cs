@@ -59,5 +59,9 @@ public class GameManage : MonoBehaviour
                 player_death_counter = 0;
             }
         }
+
+        if (pc.laser_killed >= 4 && pc.bomb_killed >= 3) {
+            
+        }
     }
 }
