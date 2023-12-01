@@ -8,11 +8,13 @@ public class GameManage : MonoBehaviour
 
     public GameObject bomb_enemy1, bomb_enemy2, bomb_enemy3;
     public GameObject laser_spawn1, laser_spawn2;
+    public GameObject kamikaze_spawn_1, kamikaze_spawn_2;
     public GameObject player;
     public ParticleSystem centralPlayerVFX;
     public Player_Controller pc;
     private int player_death_counter = 0;
     public int bomb_enemy_active = 0;
+    public int level = 1;
     private bool bomb1_alive = true, bomb2_alive = true;
     void Awake()
     {
@@ -60,8 +62,10 @@ public class GameManage : MonoBehaviour
             }
         }
 
-        if (pc.laser_killed >= 4 && pc.bomb_killed >= 3) {
-            
+        if (pc.laser_killed >= 4 && pc.bomb_killed >= 3 && level == 1){
+            level++;
+            kamikaze_spawn_1.SetActive(true);
+            kamikaze_spawn_2.SetActive(true);
         }
     }
 }
