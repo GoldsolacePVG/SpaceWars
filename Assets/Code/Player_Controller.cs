@@ -12,6 +12,7 @@ public class Player_Controller : MonoBehaviour
     public int score = 0;
     public int laser_killed = 0;
     public int bomb_killed = 0;
+    public int kamikaze_killed = 0;
     public int lives = 5;
     private int shoot_count = 0;
     private bool can_shoot = true;
@@ -40,6 +41,10 @@ public class Player_Controller : MonoBehaviour
             case "Bomb":
                 score += 20;
                 bomb_killed++;
+            break;
+            case "Kamikaze":
+                score += 5;
+                kamikaze_killed++;
             break;
         }
         Debug.Log("Player Score: " + score);
@@ -79,7 +84,8 @@ public class Player_Controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
-            other.CompareTag("LaserBullet") || other.CompareTag("BombBullet")) {
+            other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
+            other.CompareTag("KamikazeEnemy")) {
             Destruction();
         }
     }
