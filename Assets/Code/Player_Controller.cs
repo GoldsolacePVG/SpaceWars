@@ -9,11 +9,9 @@ public class Player_Controller : MonoBehaviour
     public AudioSource fire_audio;
     private Vector3 spawn;
     private float speed = 10.0f;
-    public int score = 0;
     public int laser_killed = 0;
     public int bomb_killed = 0;
     public int kamikaze_killed = 0;
-    public int lives = 5;
     private int shoot_count = 0;
     private bool can_shoot = true;
     public bool dead = false;
@@ -35,24 +33,23 @@ public class Player_Controller : MonoBehaviour
     public void AddScore(string enemy) {
         switch (enemy) {
             case "Laser":
-                score += 10;
+                GameManage.game.score += 10;
                 laser_killed++;
             break;
             case "Bomb":
-                score += 20;
+                GameManage.game.score += 20;
                 bomb_killed++;
             break;
             case "Kamikaze":
-                score += 5;
+                GameManage.game.score += 5;
                 kamikaze_killed++;
             break;
         }
-        Debug.Log("Player Score: " + score);
     }
 
     public void Destruction() {
         Instantiate(destructionVFX, transform.position, Quaternion.identity);
-        lives--;
+        GameManage.game.lives--;
         dead = true;
     }
 

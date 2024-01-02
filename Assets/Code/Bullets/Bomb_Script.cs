@@ -35,7 +35,7 @@ public class Bomb_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") || other.CompareTag("Bullet")) {
-            switch (GameManage.game.bomb_enemy_active) {
+            switch (GameManager2.game_2.bomb_enemy_active) {
                 case 0:
                     bs_1.can_shoot = true;
                 break;

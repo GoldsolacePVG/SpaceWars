@@ -50,7 +50,7 @@ public class Kamikaze_Script : MonoBehaviour
         if(other.CompareTag("Player")) {if(pc != null) {Destroy(gameObject);}}
         if(other.CompareTag("Bullet")) {
             hits += 1;
-            if(hits >= 1) {
+            if(hits >= 2) {
                 pc.AddScore("Kamikaze");
                 Destroy(gameObject);
             }

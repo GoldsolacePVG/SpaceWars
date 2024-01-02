@@ -12,17 +12,17 @@ public class HUDManager : MonoBehaviour
     private int score_shown = 0;
     private string score_string;
     void Start() {
-        lives_shown = pc.lives - 1;
-        score_shown = pc.score;
+        lives_shown = GameManage.game.lives - 1;
+        score_shown = GameManage.game.score;
     }
 
     void Update() {
         // Lives
-        lives_shown = pc.lives - 1;
+        lives_shown = GameManage.game.lives - 1;
         lives_text.text = "X" + lives_shown.ToString();
 
         // Score
-        score_shown = pc.score;
+        score_shown = GameManage.game.score;
         score_text.text = string.Format("{0:0000}", score_shown);
     }
 }
