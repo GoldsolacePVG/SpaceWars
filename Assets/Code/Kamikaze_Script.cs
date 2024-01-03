@@ -41,7 +41,6 @@ public class Kamikaze_Script : MonoBehaviour
             Move();
         }else{  
             ToPlayer();
-            Debug.Log("Hello");
         }
     }
     

@@ -6651,11 +6651,9 @@ MonoBehaviour:
     type: 3}
   centralVFX: {fileID: 17896795}
   fire_audio: {fileID: 1297252676}
-  score: 0
   laser_killed: 0
   bomb_killed: 0
   kamikaze_killed: 0
-  lives: 3
   dead: 0
 --- !u!70 &1297252675
 CapsuleCollider2D:
@@ -7139,6 +7137,11 @@ PrefabInstance:
       objectReference: {fileID: 1473301199}
     - target: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
         type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 519420030}
+    - target: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
+        type: 3}
       propertyPath: first_stage
       value: 
       objectReference: {fileID: 1481640994}
@@ -7180,6 +7183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bomb_enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb_prefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
         type: 3}

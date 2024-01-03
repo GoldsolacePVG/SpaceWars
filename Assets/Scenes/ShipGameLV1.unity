@@ -5332,16 +5332,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac265c996b049b7adf18fcfc45d8a68, type: 3}
+  m_Script: {fileID: 11500000, guid: 3aba9bbf83f6384438bb9d7b261095f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1297252670}
-  centralPlayerVFX: {fileID: 198725583575732906, guid: 380a1775a94df734ca504792dc0dee1e,
-    type: 3}
+  centralPlayerVFX: {fileID: 17896795}
   pc: {fileID: 1297252674}
-  level: 1
-  score: 0
-  lives: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -5948,6 +5944,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1175343360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175343361}
+  - component: {fileID: 1175343362}
+  m_Layer: 0
+  m_Name: kamikaze_spwn_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175343361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175343360}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.9641, y: 0.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1660699843}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175343362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175343360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57161194ddbb5f447938ed9996ba63ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kamikaze_enemy_prefab: {fileID: 2325805471584137298, guid: 153fedf058aee724f8584376152e8ee9,
+    type: 3}
 --- !u!1 &1186941633
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,6 +6518,7 @@ Transform:
   m_Children:
   - {fileID: 1286391260}
   - {fileID: 575586504}
+  - {fileID: 1175343361}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager2 : MonoBehaviour
+public class LV2Manager : MonoBehaviour
 {
-    public static GameManager2 game_2 = null;
-
     public GameObject bomb_enemy1, bomb_enemy2, bomb_enemy3;
     public GameObject laser_spawn1, laser_spawn2;
     public GameObject player;
@@ -15,14 +13,6 @@ public class GameManager2 : MonoBehaviour
     public int bomb_enemy_active = 0;
     public int level = 1;
     private bool bomb1_alive = true, bomb2_alive = true;
-    void Awake()
-    {
-        if(game_2 == null) {
-            game_2 = this;
-        }else if(game_2 != this) {
-            Destroy(gameObject);
-        }
-    }
 
     void Update()
     {

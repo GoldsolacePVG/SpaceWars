@@ -49,8 +49,8 @@ public class Player_Controller : MonoBehaviour
 
     public void Destruction() {
         Instantiate(destructionVFX, transform.position, Quaternion.identity);
-        GameManage.game.lives--;
         dead = true;
+        GameManage.game.lives--;
     }
 
     void Update()
