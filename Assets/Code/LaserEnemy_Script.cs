@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaserEnemy_Script : MonoBehaviour
 {
     public GameObject bullet_prefab;
+    public GameObject destructionVFX;
     private float speed = 5.0f;
     private int direction = 0;
     private int hits = 0;
@@ -67,6 +68,7 @@ public class LaserEnemy_Script : MonoBehaviour
         Player_Controller pc = FindObjectOfType<Player_Controller>();
         if(other.CompareTag("Player")) {
             if(pc != null) {
+                Instantiate(destructionVFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
@@ -74,6 +76,7 @@ public class LaserEnemy_Script : MonoBehaviour
             hits += 1;
             if(hits >= 5) {
                 pc.AddScore("Laser");
+                Instantiate(destructionVFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

@@ -7,6 +7,7 @@ public class BombEnemy_Script : MonoBehaviour
     public Transform first_stage, second_stage, third_stage,
                      fourth_stage, fifth_stage;
     public GameObject bomb_prefab;
+    public GameObject destructionVFX;
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
     private int shoot_count = 0;
     private float speed = 5.0f;
@@ -114,6 +115,7 @@ public class BombEnemy_Script : MonoBehaviour
         Player_Controller pc = FindObjectOfType<Player_Controller>();
         if(other.CompareTag("Player")) {
             if(pc != null) {
+                Instantiate(destructionVFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
@@ -121,6 +123,7 @@ public class BombEnemy_Script : MonoBehaviour
             hits += 1;
             if(hits >= 7) {
                 pc.AddScore("Bomb");
+                Instantiate(destructionVFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

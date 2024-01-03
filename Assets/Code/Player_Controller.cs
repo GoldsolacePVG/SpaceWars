@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Controller : MonoBehaviour
 {
-    public GameObject bullet_prefab, destructionVFX;
+    public GameObject bullet_prefab, destructionVFX, shield_obj;
     public ParticleSystem centralVFX;
     public AudioSource fire_audio;
     private Vector3 spawn;
@@ -13,8 +13,10 @@ public class Player_Controller : MonoBehaviour
     public int bomb_killed = 0;
     public int kamikaze_killed = 0;
     private int shoot_count = 0;
+    private int shield_hit = 0;
     private bool can_shoot = true;
     public bool dead = false;
+    public bool shield_on = false;
 
     void Start() {
         spawn = transform.position;
@@ -64,6 +66,10 @@ public class Player_Controller : MonoBehaviour
             Fire();
             can_shoot = false;
         }
+
+        if (shield_hit >= 4){
+            shield_on = false;
+        }
     }
 
     private void FixedUpdate() 
@@ -82,8 +88,16 @@ public class Player_Controller : MonoBehaviour
     {
         if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
             other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
-            other.CompareTag("KamikazeEnemy")) {
+            other.CompareTag("KamikazeEnemy") && !shield_on) {
             Destruction();
+        }else if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
+                  other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
+                  other.CompareTag("KamikazeEnemy") && shield_on){
+            shield_hit++;
+        }
+
+        if (other.CompareTag("ShieldPerk")){
+            shield_on = true;
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LV2Manager : MonoBehaviour
 {
@@ -49,6 +50,11 @@ public class LV2Manager : MonoBehaviour
                 pc.dead = false;
                 player_death_counter = 0;
             }
+        }
+
+        if (pc.laser_killed >= 4 && pc.bomb_killed >= 3)
+        {
+            SceneManager.LoadScene(4);
         }
     }
 }

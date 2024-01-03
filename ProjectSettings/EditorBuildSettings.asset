@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/ShipGameLV2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/SelectorLV.unity
+    path: 
     guid: cf857eb5edbecdd42be96698c4d4866e
   - enabled: 1
     path: Assets/Scenes/ShipGameLV1.unity
     guid: ec9c9c9b7ab682742993873a289cb986
+  - enabled: 1
+    path: Assets/Scenes/ShipGameLV3.unity
+    guid: 7e5e13a795f5dda4abefa42f921980dd
+  - enabled: 1
+    path: Assets/Scenes/LV1Win.unity
+    guid: 5da0f810dd311c34696dcc8a381c0584
   m_configObjects: {}

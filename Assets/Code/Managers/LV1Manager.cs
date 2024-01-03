@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LV1Manager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class LV1Manager : MonoBehaviour
     
     void Update()
     {
+        if (GameManage.game.score >= 500)
+        {
+            SceneManager.LoadScene(4);
+        }
+        
         if (pc.dead) {
             player.SetActive(false);
             player_death_counter++;

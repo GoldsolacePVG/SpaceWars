@@ -628,6 +628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet_prefab: {fileID: 7880111583816731990, guid: 8054acbb77a6f344186057c3b03cea30,
     type: 3}
+  destructionVFX: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
+    type: 3}
 --- !u!58 &5494557878690716220
 CircleCollider2D:
   m_ObjectHideFlags: 0

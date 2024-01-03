@@ -13,3 +13,7 @@ Laser Enemy: https://www.freepng.es/png-eeq4yz/
 Bomb Enemy: https://www.freepng.es/png-btbfwk
 
 Shield: https://opengameart.org/content/shield-effect
+
+BG: https://screamingbrainstudios.itch.io/seamless-space-backgrounds
+
+Perks: https://free-game-assets.itch.io/free-crystals-2d-game-objects

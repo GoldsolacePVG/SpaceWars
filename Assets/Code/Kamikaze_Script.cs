@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Kamikaze_Script : MonoBehaviour
 {
+    public GameObject destructionVFX;
     public GameObject player;
     private float speed = 5.0f;
     private int direction = 0;
@@ -34,7 +35,7 @@ public class Kamikaze_Script : MonoBehaviour
     
     void Update()
     {
-        if(this.transform.position.x >= player.transform.position.x - 1.0f && this.transform.position.x <= player.transform.position.x + 1.0f){is_following_player = true;}
+        if(this.transform.position.x >= player.transform.position.x - 0.5f && this.transform.position.x <= player.transform.position.x + 0.5f){is_following_player = true;}
         if(this.transform.position.x <= -6.16f) {direction = 1;}
         if(this.transform.position.x >= 6.16f) {direction = 0;}
         if (!is_following_player){
@@ -51,6 +52,7 @@ public class Kamikaze_Script : MonoBehaviour
             hits += 1;
             if(hits >= 2) {
                 pc.AddScore("Kamikaze");
+                Instantiate(destructionVFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

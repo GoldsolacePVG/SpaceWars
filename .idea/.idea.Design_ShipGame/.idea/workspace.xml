@@ -6,20 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d79ea4d7-2ef6-4906-aaf0-188db0fffddc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Bullets/Bomb_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Bullets/Bomb_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/BombEnemy_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BombEnemy_Script.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Kamikaze_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Kamikaze_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/LaserEnemy_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LaserEnemy_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GameManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GameManage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/LV1Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/LV1Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/LV2Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/LV2Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Singleton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Singleton/GameManage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Singleton/GameManage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Singleton/GameManager2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Singleton/GameManager2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectorLV.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectorLV.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/SceneManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/SceneManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player Explosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/kamikaze_enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/kamikaze_enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/laser_enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/laser_enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sprites links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sprites links.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +145,7 @@
       <workItem from="1703588723359" duration="4047000" />
       <workItem from="1704214254275" duration="4660000" />
       <workItem from="1704278726031" duration="3615000" />
+      <workItem from="1704302941084" duration="4494000" />
     </task>
     <servers />
   </component>

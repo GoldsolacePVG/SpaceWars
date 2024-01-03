@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManage : MonoBehaviour
 {
     public static GameManage game = null;
-    public int score, lives;
+    public int score, lives, level;
     void Awake()
     {
         if(game == null) {
@@ -20,5 +20,6 @@ public class GameManage : MonoBehaviour
     {
         lives = 5;
         score = 0;
+        level = 1;
     }
 }
