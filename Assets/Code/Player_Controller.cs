@@ -6,6 +6,9 @@ public class Player_Controller : MonoBehaviour
 {
     public GameObject bullet_prefab, destructionVFX, shield_obj;
     public GameObject lateralR, lateralL;
+    private GameObject perk_controller;
+    public LV1PerkController lv1;
+    public LV2PerkController lv2;
     public ParticleSystem centralVFX, lateralRVFX, lateralLVFX;
     public AudioSource fire_audio;
     private Vector3 spawn;
@@ -22,7 +25,7 @@ public class Player_Controller : MonoBehaviour
     public void SpawnPlayer() {
         this.transform.position = spawn;
     }
-
+    
     void Fire() {
         centralVFX.Play();
         GameObject sp = Instantiate<GameObject>(bullet_prefab, this.transform.position, Quaternion.identity);
@@ -71,7 +74,11 @@ public class Player_Controller : MonoBehaviour
         }
 
         if (shield_on){shield_obj.SetActive(true);}else{shield_obj.SetActive(false);}
-        if (shield_hit >= 4){shield_on = false;}
+
+        if (shield_hit >= 4) {
+            shield_on = false;
+            shield_hit = 0;
+        }
 
         if (multi_bullet_on){
             multi_bullet_count++;
@@ -96,22 +103,28 @@ public class Player_Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
+        if ((other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
             other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
-            other.CompareTag("KamikazeEnemy") && !shield_on) {
+            other.CompareTag("KamikazeEnemy")) && !shield_on) {
             Destruction();
-        }else if (other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
+        }else if ((other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
                   other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
-                  other.CompareTag("KamikazeEnemy") && shield_on){
+                  other.CompareTag("KamikazeEnemy")) && shield_on){
             shield_hit++;
         }
 
         if (other.CompareTag("ShieldPerk")){
             shield_on = true;
+            if (GameManage.game.level == 1){
+                lv1.perk_alive = false;
+            }else if (GameManage.game.level == 2){
+                lv2.perk_alive = false;
+            }
         }
 
         if (other.CompareTag("BulletPerk")){
             multi_bullet_on = true;
+            lv2.perk_alive = false;
         }
     }
 }

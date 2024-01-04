@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d79ea4d7-2ef6-4906-aaf0-188db0fffddc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/ShieldPerkScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/ShieldPerkScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/LV1PerkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/LV1PerkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +136,7 @@
       <workItem from="1704278726031" duration="3615000" />
       <workItem from="1704302941084" duration="4494000" />
       <workItem from="1704364801063" duration="5898000" />
+      <workItem from="1704383137725" duration="5184000" />
     </task>
     <servers />
   </component>

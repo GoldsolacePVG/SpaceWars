@@ -6,12 +6,15 @@ public class LV1PerkController : MonoBehaviour
 {
     public GameObject spot_1, spot_2, spot_3, spot_4, spot_5;
     public GameObject perk_obj;
+    private PerkScript perks;
     public int timer = 0, spot_num;
     public bool can_appear_perk = false, perk_alive = false;
 
     void Start(){can_appear_perk = false;}
 
     void Update(){
+        //perks = GameObject.Find("shield_perk").GetComponent<PerkScript>();
+        //perks = GameObject.Find("bullet_perk").GetComponent<PerkScript>();
         if (!can_appear_perk){
             timer++;
             if (timer >= 2000) {
@@ -19,7 +22,7 @@ public class LV1PerkController : MonoBehaviour
                 timer = 0;
             }
         }
-
+Debug.Log(timer);
         if (can_appear_perk && !perk_alive){
             spot_num = Random.Range(1, 6);
             switch (spot_num){
@@ -44,10 +47,6 @@ public class LV1PerkController : MonoBehaviour
                     perk_alive = true;
                 break;
             }
-        }
-
-        if (perk_obj == null){
-            can_appear_perk = false;
         }
     }
 }

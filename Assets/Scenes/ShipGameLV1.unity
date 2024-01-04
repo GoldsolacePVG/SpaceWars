@@ -239,7 +239,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -6356,6 +6356,8 @@ MonoBehaviour:
   shield_obj: {fileID: 1029723266}
   lateralR: {fileID: 17896792}
   lateralL: {fileID: 17896792}
+  lv1: {fileID: 519420034}
+  lv2: {fileID: 0}
   centralVFX: {fileID: 17896795}
   lateralRVFX: {fileID: 17896795}
   lateralLVFX: {fileID: 17896795}
