@@ -23,6 +23,7 @@ TagManager:
   - CannonEnemy
   - BombBullet
   - ShieldPerk
+  - BulletPerk
   layers:
   - Default
   - TransparentFX

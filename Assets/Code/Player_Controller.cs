@@ -5,18 +5,15 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
     public GameObject bullet_prefab, destructionVFX, shield_obj;
-    public ParticleSystem centralVFX;
+    public GameObject lateralR, lateralL;
+    public ParticleSystem centralVFX, lateralRVFX, lateralLVFX;
     public AudioSource fire_audio;
     private Vector3 spawn;
     private float speed = 10.0f;
-    public int laser_killed = 0;
-    public int bomb_killed = 0;
-    public int kamikaze_killed = 0;
-    private int shoot_count = 0;
-    private int shield_hit = 0;
+    public int laser_killed = 0, bomb_killed = 0, kamikaze_killed = 0;
+    private int shoot_count = 0, shield_hit = 0, multi_bullet_count = 0;
     private bool can_shoot = true;
-    public bool dead = false;
-    public bool shield_on = false;
+    public bool dead = false, shield_on = false, multi_bullet_on = false;
 
     void Start() {
         spawn = transform.position;
@@ -29,6 +26,12 @@ public class Player_Controller : MonoBehaviour
     void Fire() {
         centralVFX.Play();
         GameObject sp = Instantiate<GameObject>(bullet_prefab, this.transform.position, Quaternion.identity);
+        if (multi_bullet_on){
+            lateralLVFX.Play();
+            GameObject sp1 = Instantiate<GameObject>(bullet_prefab, lateralL.transform.position, Quaternion.identity);
+            lateralRVFX.Play();
+            GameObject sp2 = Instantiate<GameObject>(bullet_prefab, lateralR.transform.position, Quaternion.identity);
+        }
         fire_audio.Play();
     }
 
@@ -67,8 +70,15 @@ public class Player_Controller : MonoBehaviour
             can_shoot = false;
         }
 
-        if (shield_hit >= 4){
-            shield_on = false;
+        if (shield_on){shield_obj.SetActive(true);}else{shield_obj.SetActive(false);}
+        if (shield_hit >= 4){shield_on = false;}
+
+        if (multi_bullet_on){
+            multi_bullet_count++;
+            if (multi_bullet_count >= 500){
+                multi_bullet_on = false;
+                multi_bullet_count = 0;
+            }
         }
     }
 
@@ -98,6 +108,10 @@ public class Player_Controller : MonoBehaviour
 
         if (other.CompareTag("ShieldPerk")){
             shield_on = true;
+        }
+
+        if (other.CompareTag("BulletPerk")){
+            multi_bullet_on = true;
         }
     }
 }
