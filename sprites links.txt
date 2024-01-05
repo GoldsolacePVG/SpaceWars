@@ -17,3 +17,5 @@ Shield: https://opengameart.org/content/shield-effect
 BG: https://screamingbrainstudios.itch.io/seamless-space-backgrounds
 
 Perks: https://free-game-assets.itch.io/free-crystals-2d-game-objects
+
+Boss: https://larzes.itch.io/2d-space-shooter-sprites

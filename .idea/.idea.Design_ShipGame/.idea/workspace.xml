@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d79ea4d7-2ef6-4906-aaf0-188db0fffddc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/LV1PerkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/LV1PerkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bullets/Bullet_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Bullets/Bullet_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV3.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +16,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/BossScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -137,6 +137,7 @@
       <workItem from="1704302941084" duration="4494000" />
       <workItem from="1704364801063" duration="5898000" />
       <workItem from="1704383137725" duration="5184000" />
+      <workItem from="1704448527576" duration="2599000" />
     </task>
     <servers />
   </component>
