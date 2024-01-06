@@ -5,10 +5,13 @@ using UnityEngine;
 public class Bomb_Script : MonoBehaviour
 {
     public LV2Manager manager;
-    public Transform first_stage, second_stage, third_stage;
+    public Transform first_stage, second_stage, third_stage, waiter;
     public BombEnemy_Script bs_1, bs_2, bs_3;
-    private int path;
+    public GameObject destructionVFX;
+    private GameObject enemy;
+    private int path, counter = 0;
     private float speed = 5.0f;
+    public bool moving = true;
     void Start() {
         path = Random.Range(1, 4);
     }
@@ -31,7 +34,20 @@ public class Bomb_Script : MonoBehaviour
     }
 
     void Update() {
-        MoveToPath();
+        enemy = GameObject.Find("bomb_enemy");
+        if (moving) {
+            MoveToPath();
+        }
+
+        if (!moving) {
+            counter++;
+            if (counter > 100) {
+                path = Random.Range(1, 4);
+                moving = true;
+                transform.position = enemy.transform.position;
+                counter = 0;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -47,7 +63,9 @@ public class Bomb_Script : MonoBehaviour
                     bs_3.can_shoot = true;
                 break;
             }
-            Destroy(gameObject);
+            Instantiate(destructionVFX, transform.position, Quaternion.identity);
+            transform.position = waiter.position;
+            moving = false;
         }
     }
 }

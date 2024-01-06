@@ -6,7 +6,8 @@ public class BombEnemy_Script : MonoBehaviour
 {
     public Transform first_stage, second_stage, third_stage,
                      fourth_stage, fifth_stage;
-    public GameObject bomb_prefab;
+    public GameObject bomb;
+    public Bomb_Script bomb_sc;
     public GameObject destructionVFX;
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
     private int shoot_count = 0;
@@ -16,7 +17,7 @@ public class BombEnemy_Script : MonoBehaviour
     void Start() {}
 
     void FireBomb() {
-        GameObject sp = Instantiate<GameObject>(bomb_prefab, this.transform.position, Quaternion.identity);
+        //GameObject sp = Instantiate<GameObject>(bomb_prefab, this.transform.position, Quaternion.identity);
     }
 
     void MoveForward() {
@@ -116,6 +117,9 @@ public class BombEnemy_Script : MonoBehaviour
         if(other.CompareTag("Player")) {
             if(pc != null) {
                 Instantiate(destructionVFX, transform.position, Quaternion.identity);
+                Instantiate(bomb_sc.destructionVFX, bomb.transform.position, Quaternion.identity);
+                bomb.transform.position = bomb_sc.waiter.position;
+                bomb_sc.moving = false;
                 Destroy(gameObject);
             }
         }
@@ -124,6 +128,9 @@ public class BombEnemy_Script : MonoBehaviour
             if(hits >= 7) {
                 pc.AddScore("Bomb");
                 Instantiate(destructionVFX, transform.position, Quaternion.identity);
+                Instantiate(bomb_sc.destructionVFX, bomb.transform.position, Quaternion.identity);
+                bomb.transform.position = bomb_sc.waiter.position;
+                bomb_sc.moving = false;
                 Destroy(gameObject);
             }
         }

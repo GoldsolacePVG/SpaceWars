@@ -10905,6 +10905,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819242419}
   m_CullTransparentMesh: 1
+--- !u!1 &834287918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834287919}
+  m_Layer: 0
+  m_Name: WaiterBomb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834287919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834287918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.46, y: 9.48, z: -6.7146873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856160202
 GameObject:
   m_ObjectHideFlags: 0
@@ -11433,6 +11463,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
         type: 3}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 460851922092145342}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb_sc
+      value: 
+      objectReference: {fileID: 460851922092145343}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
       propertyPath: fifth_stage
       value: 
       objectReference: {fileID: 1131540722}
@@ -11918,6 +11958,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 460851922092145342}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb_sc
+      value: 
+      objectReference: {fileID: 460851922092145343}
     - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
         type: 3}
       propertyPath: fifth_stage
@@ -17125,6 +17175,11 @@ PrefabInstance:
       objectReference: {fileID: 1473301199}
     - target: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
         type: 3}
+      propertyPath: waiter
+      value: 
+      objectReference: {fileID: 834287919}
+    - target: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 519420030}
@@ -17143,8 +17198,32 @@ PrefabInstance:
       propertyPath: second_stage
       value: 
       objectReference: {fileID: 2063582069}
+    - target: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
+        type: 3}
+      propertyPath: destructionVFX
+      value: 
+      objectReference: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3, type: 3}
+--- !u!1 &460851922092145342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 460851922411932280, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
+    type: 3}
+  m_PrefabInstance: {fileID: 460851922092145341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &460851922092145343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 460851922411932283, guid: 40e7b5216bdff1c4298dc8c6ac4e3df3,
+    type: 3}
+  m_PrefabInstance: {fileID: 460851922092145341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460851922092145342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac23883e18bac146af519618cc6470d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5822243218756651581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17172,6 +17251,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: bomb_enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 460851922092145342}
+    - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
+        type: 3}
+      propertyPath: bomb_sc
+      value: 
+      objectReference: {fileID: 460851922092145343}
     - target: {fileID: 5822243218348309982, guid: 2545ee22bec6a474eb6b9842e2310bb3,
         type: 3}
       propertyPath: bomb_prefab
