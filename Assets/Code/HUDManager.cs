@@ -18,7 +18,7 @@ public class HUDManager : MonoBehaviour
 
     void Update() {
         // Lives
-        lives_shown = GameManage.game.lives - 1;
+        lives_shown = GameManage.game.lives;
         lives_text.text = "X" + lives_shown.ToString();
 
         // Score

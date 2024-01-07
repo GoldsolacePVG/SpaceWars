@@ -9,15 +9,17 @@ public class BombEnemy_Script : MonoBehaviour
     public GameObject bomb;
     public Bomb_Script bomb_sc;
     public GameObject destructionVFX;
+    public AudioSource explosion_audio;
     private int path = 0, index_forward = 0, index_backward = 0, hits = 0;
     private int shoot_count = 0;
     private float speed = 5.0f;
     public bool can_shoot = false;
     private bool first_time_shooting = false;
-    void Start() {}
+
+    void Start(){explosion_audio = GetComponent<AudioSource>();}
 
     void FireBomb() {
-        //GameObject sp = Instantiate<GameObject>(bomb_prefab, this.transform.position, Quaternion.identity);
+        explosion_audio.Play();
     }
 
     void MoveForward() {
@@ -94,7 +96,6 @@ public class BombEnemy_Script : MonoBehaviour
         }
         FollowPath();
         if(can_shoot) {
-            FireBomb();
             can_shoot = false;
         }
     }

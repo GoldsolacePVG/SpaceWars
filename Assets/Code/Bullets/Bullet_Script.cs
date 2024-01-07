@@ -29,7 +29,7 @@ public class Bullet_Script : MonoBehaviour
            other.CompareTag("KamikazeEnemy") || other.CompareTag("CannonEnemy") ||
            other.CompareTag("Boss") || other.CompareTag("LaserBullet") || other.CompareTag("BombBullet")) {
             if (other.CompareTag("Boss")) {
-                boss.health -= 20;
+                boss.health -= 5;
             }
             Destroy(gameObject);
         }

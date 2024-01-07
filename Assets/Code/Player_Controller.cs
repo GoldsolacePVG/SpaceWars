@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -76,7 +77,10 @@ public class Player_Controller : MonoBehaviour
 
         if (shield_on){shield_obj.SetActive(true);}else{shield_obj.SetActive(false);}
 
-        if (shield_hit >= 4) {
+        if (shield_hit >= 4 && GameManage.game.level != 3) {
+            shield_on = false;
+            shield_hit = 0;
+        }else if(shield_hit >= 2 && GameManage.game.level == 3){
             shield_on = false;
             shield_hit = 0;
         }
@@ -87,6 +91,10 @@ public class Player_Controller : MonoBehaviour
                 multi_bullet_on = false;
                 multi_bullet_count = 0;
             }
+        }
+
+        if (GameManage.game.lives <= 0) {
+            SceneManager.LoadScene(6);
         }
     }
 
@@ -106,11 +114,13 @@ public class Player_Controller : MonoBehaviour
     {
         if ((other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") || 
             other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
-            other.CompareTag("KamikazeEnemy")) && !shield_on) {
+            other.CompareTag("KamikazeEnemy") || other.CompareTag("RightLaser") ||
+            other.CompareTag("LeftLaser")) && !shield_on) {
             Destruction();
         }else if ((other.CompareTag("LaserEnemy") || other.CompareTag("BombEnemy") ||
                   other.CompareTag("LaserBullet") || other.CompareTag("BombBullet") ||
-                  other.CompareTag("KamikazeEnemy")) && shield_on){
+                  other.CompareTag("KamikazeEnemy") || other.CompareTag("RightLaser") ||
+                  other.CompareTag("LeftLaser")) && shield_on){
             shield_hit++;
         }
 

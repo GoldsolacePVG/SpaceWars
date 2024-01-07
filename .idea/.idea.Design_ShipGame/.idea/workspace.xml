@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d79ea4d7-2ef6-4906-aaf0-188db0fffddc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Bullets/LateralLaserScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Bullets/LateralLaserScript.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Design_ShipGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/BombEnemy_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BombEnemy_Script.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/BossScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BossScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Perks/PerkScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bullets/Bullet_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Bullets/Bullet_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/HUDManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Kamikaze_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Kamikaze_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/LV1Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/LV1Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/SceneManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/SceneManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/bomb_enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/bomb_enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/kamikaze_enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/kamikaze_enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LV1Win.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LV1Win.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ShipGameLV3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sprites links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sprites links.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +71,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Design_ShipGame\SpaceWars.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Gold\Documents\GitHub\Design_ShipGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity 2021.1.15f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Gold\Documents\GitHub\Design_ShipGame -debugCodeOptimization" />
@@ -144,6 +169,7 @@
       <workItem from="1704448527576" duration="2599000" />
       <workItem from="1704559975066" duration="3113000" />
       <workItem from="1704624012697" duration="4583000" />
+      <workItem from="1704639671516" duration="11293000" />
     </task>
     <servers />
   </component>

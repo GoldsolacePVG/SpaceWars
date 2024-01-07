@@ -15,6 +15,7 @@ public class Kamikaze_Script : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         is_following_player = false;
+        if (this.transform.position.x < 0.0f) {direction = 1;}else{direction = 0;}
     }
 
     void Move() {
@@ -35,7 +36,7 @@ public class Kamikaze_Script : MonoBehaviour
     
     void Update()
     {
-        if(this.transform.position.x >= player.transform.position.x - 0.5f && this.transform.position.x <= player.transform.position.x + 0.5f){is_following_player = true;}
+        if(this.transform.position.x >= player.transform.position.x - 0.8f && this.transform.position.x <= player.transform.position.x + 0.8f){is_following_player = true;}
         if(this.transform.position.x <= -6.16f) {direction = 1;}
         if(this.transform.position.x >= 6.16f) {direction = 0;}
         if (!is_following_player){
@@ -47,7 +48,7 @@ public class Kamikaze_Script : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other) {
         Player_Controller pc = FindObjectOfType<Player_Controller>();
-        if(other.CompareTag("Player")) {if(pc != null) {Destroy(gameObject);}}
+        if(other.CompareTag("Player")) {if(pc != null) {Instantiate(destructionVFX, transform.position, Quaternion.identity);Destroy(gameObject);}}
         if(other.CompareTag("Bullet")) {
             hits += 1;
             if(hits >= 2) {

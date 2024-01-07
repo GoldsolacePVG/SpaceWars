@@ -22,6 +22,7 @@ public class SceneManagement : MonoBehaviour
             SceneManager.LoadScene(3);
             GameManage.game.level = 3;
         }
+        Debug.Log(GameManage.game.level);
     }
     public void InitChange(int sceneValue)
     {

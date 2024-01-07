@@ -148,3 +148,4 @@ MonoBehaviour:
   destructionVFX: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
     type: 3}
   player: {fileID: 0}
+  explosion_audio: {fileID: 0}

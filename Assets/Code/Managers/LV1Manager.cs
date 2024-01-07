@@ -12,8 +12,7 @@ public class LV1Manager : MonoBehaviour
     
     void Update()
     {
-        if (GameManage.game.score >= 500)
-        {
+        if (GameManage.game.score >= 300 && GameManage.game.level == 1) {
             SceneManager.LoadScene(4);
         }
         
