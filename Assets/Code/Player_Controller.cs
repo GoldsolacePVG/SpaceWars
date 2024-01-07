@@ -9,6 +9,7 @@ public class Player_Controller : MonoBehaviour
     private GameObject perk_controller;
     public LV1PerkController lv1;
     public LV2PerkController lv2;
+    public LV3PerkController lv3;
     public ParticleSystem centralVFX, lateralRVFX, lateralLVFX;
     public AudioSource fire_audio;
     private Vector3 spawn;
@@ -119,12 +120,18 @@ public class Player_Controller : MonoBehaviour
                 lv1.perk_alive = false;
             }else if (GameManage.game.level == 2){
                 lv2.perk_alive = false;
+            }else if (GameManage.game.level == 3){
+                lv3.perk_alive_1 = false;
             }
         }
 
         if (other.CompareTag("BulletPerk")){
             multi_bullet_on = true;
-            lv2.perk_alive = false;
+            if (GameManage.game.level == 2) {
+                lv2.perk_alive = false;
+            }else if (GameManage.game.level == 3) {
+                lv3.perk_alive_2 = false;
+            }
         }
     }
 }

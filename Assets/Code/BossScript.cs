@@ -5,9 +5,11 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     public GameObject enemy_prefab, bullet_prefab;
+    public GameObject spw_1, spw_2, spw_3, spw_4;
     private float speed = 5.0f;
     private int direction = 0, enemy_counter = 0;
     public int phase = 1, health = 1000;
+    private int spawner;
     public bool can_shoot_enemy = true;
     
     void Start(){}
@@ -24,10 +26,21 @@ public class BossScript : MonoBehaviour
     }
 
     void FireEnemy() {
-        Vector3 aux_vector = this.transform.position;
-        aux_vector.y = this.transform.position.y - 3;
-        
-        Instantiate(enemy_prefab, aux_vector, Quaternion.identity);
+        spawner = Random.Range(1, 5);
+        switch (spawner){
+            case 1:
+                Instantiate(enemy_prefab, spw_1.transform.position, Quaternion.identity);
+            break;
+            case 2:
+                Instantiate(enemy_prefab, spw_2.transform.position, Quaternion.identity);
+            break;
+            case 3:
+                Instantiate(enemy_prefab, spw_3.transform.position, Quaternion.identity);
+            break;
+            case 4:
+                Instantiate(enemy_prefab, spw_4.transform.position, Quaternion.identity);
+            break;
+        }
     }
 
     void FireBullet() {
@@ -56,7 +69,11 @@ public class BossScript : MonoBehaviour
 
         if (!can_shoot_enemy) {
             enemy_counter++;
-            if (enemy_counter >= 500) {
+            if (enemy_counter >= 200 && phase == 2) {
+                can_shoot_enemy = true;
+                enemy_counter = 0;
+            }
+            if (enemy_counter >= 350) {
                 can_shoot_enemy = true;
                 enemy_counter = 0;
             }
